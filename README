@@ -1,0 +1,12 @@
+Physical is a simple particle system simulator.
+
+REQUIREMENTS
+	* Mac OS 10.9 or later
+	* SDL2: found at http://www.libsdl.org/
+
+INSTALLING
+	* make
+
+RUNNING DEMOS
+	* Run demos from within the demos directory.
+
