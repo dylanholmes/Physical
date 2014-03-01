@@ -1,6 +1,7 @@
 #include "DampedSpringForce.h"
 
-DampedSpringForce::DampedSpringForce( struct Particle **p, int n, float ks, float kd, float r) {
+DampedSpringForce::DampedSpringForce( struct Particle **p, int n, float ks,
+	float kd, float r) {
     this->p = p;
     this->n = n;
 

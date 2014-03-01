@@ -1,23 +1,21 @@
 #ifndef PARTICLE_H
 #define PARTICLE_H
 
+#include <vector>
+
 // forward declarations
 class Force;
 
-struct Particle {
-    float m;  // mass
-    float x[3];  // position vector
-    float v[3];  // velocity vector
-    float f[3];  // force accumulator
-};
+class Particle {
+ public:
+  Particle(float m = 0, std::vector<float> x(3, 0), std::vector<float> v(3, 0),
+    std::vector<float> f(3, 0));
 
-
-struct ParticleSystem {
-    Particle **p;  // array of pointers to particles
-    int n;  // number of particles
-    float t;  // simulation clock
-    Force **F;  // array of pointers to force objects
-    int nF;  // number of Force objects
+ private:
+    float mass;
+    std::vector<float> position(3, 0);
+    std::vector<float> velocity(3, 0);
+    std::vector<float> force(3, 0);
 };
 
 #endif  // PARTICLE_H

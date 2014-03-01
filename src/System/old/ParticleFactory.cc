@@ -17,25 +17,6 @@ struct Particle *ParticleFactory::createParticle(float m, float x[3], float v[3]
     return p;
 }
 
-void ParticleFactory::freeParticle(struct Particle *p) {
-    assert(p != NULL);
-
-    free(p->x);
-    free(p->v);
-    free(p->f);
-    free(p);
-}
-
-void ParticleFactory::printParticle(struct Particle *p) {
-    std::cout << p->m << std::endl;
-    int i;
-    for (i = 0; i < 3; i++) {
-        std::cout << p->x[i] << std::endl;
-        std::cout << p->v[i] << std::endl;
-        std::cout << p->f[i] << std::endl;
-    }
-}
-
 // ParticleSystem
 
 struct ParticleSystem *ParticleFactory::createParticleSystem(int numberOfParticles) {
@@ -63,11 +44,3 @@ struct ParticleSystem *ParticleFactory::createParticleSystem(int numberOfParticl
     ps->nF = 0;
     return ps;
 }
-    void ParticleFactory::freeParticleSystem(struct ParticleSystem *p)
- {
-
- }
-    void ParticleFactory::printParticleSystem(struct ParticleSystem *p)
- {
-
- }
